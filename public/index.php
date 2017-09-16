@@ -40,8 +40,8 @@ $container['db'] = function ($c) {
 
 $app->get('/callback/{client_id}', AuthController::class.':callback');
 
-$app->get('/auth/{client_id}/{username}/', AuthController::class.':auth');
+$app->get('/auth/{client_id}/{username}', AuthController::class.':auth');
 
-$app->get('/{client_id}/{username}/', AuthController::class.':getToken');
+$app->get('/{client_id}/{username}', AuthController::class.':getToken');
 
 $app->run();
