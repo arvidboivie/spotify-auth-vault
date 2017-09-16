@@ -1,0 +1,17 @@
+{
+    "name": "boivie/spotify-auth-vault",
+    "description": "Helps me with spotify authentication for other apps",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Arvid Boivie",
+            "email": "arvid.boivie@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.8",
+        "jwilsson/spotify-web-api-php": "^2.0",
+        "hassankhan/config": "^0.10.0",
+        "symfony/yaml": "^3.3"
+    }
+}
