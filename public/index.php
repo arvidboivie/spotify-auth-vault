@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
@@ -8,7 +8,7 @@ use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
 use Noodlehaus\Config;
 
-$config = Config::load('config.yml');
+$config = Config::load('../config.yml');
 
 $slimConfig = [
     'displayErrorDetails' => true,
@@ -22,7 +22,7 @@ $container = $app->getContainer();
 
 $container['logger'] = function ($c) {
     $logger = new \Monolog\Logger('logger');
-    $file_handler = new \Monolog\Handler\StreamHandler('logs/app.log');
+    $file_handler = new \Monolog\Handler\StreamHandler('../logs/app.log');
     $logger->pushHandler($file_handler);
     return $logger;
 };
