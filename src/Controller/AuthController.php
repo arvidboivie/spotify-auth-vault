@@ -121,10 +121,10 @@ class AuthController
 
             $tokenStatement = $this->container->db->prepare('UPDATE auth
                                                 SET access_token= :access_token, expires= :expires
-                                                WHERE id = :id');
+                                                WHERE client_id = :client_id');
 
             $tokenStatement->execute([
-                'id' => $session->getClientId(),
+                'client_id' => $session->getClientId(),
                 'access_token' => $session->getAccessToken(),
                 'expires' => $session->getTokenExpiration(),
             ]);
