@@ -26,9 +26,7 @@ class AuthController
         );
 
         $authorizeUrl = $apiSession->getAuthorizeUrl([
-            'scope' => [
-                $spotifyConfig['scopes'],
-            ]
+            'scope' => $spotifyConfig['scopes'],
         ]);
 
         return $response->withRedirect($authorizeUrl, 302);
