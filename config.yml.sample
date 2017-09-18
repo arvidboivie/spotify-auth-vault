@@ -1,0 +1,23 @@
+database:
+    host: <config here>
+    name: <config here>
+    user: <config here>
+    password: <config here>
+    charset: utf8
+
+spotify:
+    <client_id>:   #app name
+        secret: <secret>
+        redirect_URI: <redirect_URI>
+        scopes:
+            - <list>
+            - <of>
+            - <scopes>
+
+    <client_id>:   #app name
+        secret: <secret>
+        redirect_URI: <redirect_URI>
+        scopes:
+            - <list>
+            - <of>
+            - <scopes>

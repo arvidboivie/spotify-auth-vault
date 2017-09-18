@@ -27,8 +27,7 @@ class AuthController
 
         $authorizeUrl = $apiSession->getAuthorizeUrl([
             'scope' => [
-                'playlist-read-private',
-                'playlist-read-collaborative',
+                implode(',', $spotifyConfig['scopes']),
             ]
         ]);
 
