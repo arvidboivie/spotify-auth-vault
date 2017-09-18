@@ -27,7 +27,7 @@ class AuthController
 
         $authorizeUrl = $apiSession->getAuthorizeUrl([
             'scope' => [
-                implode(',', $spotifyConfig['scopes']),
+                $spotifyConfig['scopes'],
             ]
         ]);
 
