@@ -101,7 +101,7 @@ class AuthController
 
         $accessToken = $result->access_token;
 
-        if (time() > $result->expires) {
+        if (time() + (60*2) > $result->expires) {
             $spotifyConfig = $this->container->settings['spotify'][$args['client_id']];
 
             $session = new Session(
