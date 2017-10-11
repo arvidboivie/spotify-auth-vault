@@ -18,5 +18,8 @@
         "psr-4": {
             "Boivie\\SpotifyVault\\": "src/"
         }
+    },
+    "require-dev": {
+        "bmitch/churn-php": "^0.3.1"
     }
 }
